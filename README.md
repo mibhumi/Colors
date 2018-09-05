@@ -1,4 +1,4 @@
-# Colors 
+# Colors
 [A color palette generator](http://www.colors.devarshi.xyz)
 
 Generates palettes on the bases of Color Shades, Hue Shift and Intensity. :sailboat:
