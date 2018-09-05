@@ -15,6 +15,5 @@
 Database : MySql
 
 ## Libraries
-1. shake.js
->To detect the phone shaking
+1. shake.js ```To detect the phone shaking```
 
