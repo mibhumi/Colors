@@ -13,14 +13,7 @@ function test1() {
 
     main()
 
-    function main() {
-        colorlist = document.getElementById('colorlist')
-        numcolor = 5;
-        numcolornum = document.getElementById('numcolornum')
-        onNumbe({
-            target: numcolornum
-        })
-    }
+    
 
 
     function onNumbe(evt) {
