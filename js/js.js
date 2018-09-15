@@ -3,11 +3,7 @@ function test1() {
     let colors = []
     let value = Math.floor(Math.random() * 360) + 0 
     let shift = Math.floor(Math.random() * 721) - 360
-    let inten = Math.floor(Math.random() * 100) + 0
-    let color = 50 
-    var mainer = []
-    var colorclean = []
-
+    let 
     
     /*console.clear()
     console.log("value : "+value)
@@ -37,13 +33,7 @@ function test1() {
             if (color > colors.length) {
                 let span = document.createElement('span')
                 span.className = 'color'
-                colorlist.appendChild(span)
-                colors.push(span)
-            } else if (color < colors.length && colors.length > 0) {
-                colorlist.removeChild(colorlist.firstChild)
-                colors.shift()
-            } else {
-                break
+                
             }
         }
 
@@ -51,22 +41,7 @@ function test1() {
     }
 
     function onChange() {
-        let cl = colors.length + 1
-        var ca = []
-        for (let a = colors.length; a > 0; a--) {
-            let h = ((value + shift * (a - cl / 2) / cl) / 360) % 1
-            let s = inten / 100
-            let l = a / cl
-            let c = getColor(h, s, l)
-            let span = colors[a - 1]
-            span.innerHTML = getHex(...c) + '<br>' + getBkg(...c)
-            span.style.backgroundColor = getBkg(...c)
-
-            ca.push('#' + span.style.backgroundColor);
-
-            if (0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2] > 127) {
-                span.style.color = 'black'
-            } else {
+        
                 span.style.color = 'white'
             }
             
@@ -85,48 +60,8 @@ function test1() {
 
     }
 
-    function getColor(h, s, l) {
-    
-        var r, g, b;
 
-        if (s == 0) {
-            r = g = b = l;
-        } else {
-            var hue2rgb = function hue2rgb(p, q, t) {
-                if (t < 0) t += 1;
-                if (t > 1) t -= 1;
-                if (t < 1 / 6) return p + (q - p) * 6 * t;
-                if (t < 1 / 2) return q;
-                if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
-                return p;
-            }
 
-            var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-            var p = 2 * l - q;
-            r = hue2rgb(p, q, h + 1 / 3);
-            g = hue2rgb(p, q, h);
-            b = hue2rgb(p, q, h - 1 / 3);
-        }
-
-        return [
-            Math.round(r * 255),
-            Math.round(g * 255),
-            Math.round(b * 255)
-        ];
-    }
-
-    function getHex(r, g, b) {
-        let a = `0${r.toString(16)}`.slice(-2)
-        let c = `0${g.toString(16)}`.slice(-2)
-        let d = `0${b.toString(16)}`.slice(-2)
-        return `#${a}${c}${d}`
-    }
-
-    function getBkg(r, g, b) {
-        return `rgb(${r},${g},${b})`
-    }
-
-}
 /*Custom Functions*/
 
 function displayinstamodal() {
